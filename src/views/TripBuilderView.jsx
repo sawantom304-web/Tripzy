@@ -199,7 +199,7 @@ export default function TripBuilderView({ onBuildTrip }) {
 
   return (
     <div className="min-h-screen bg-[#0A0E1A] pt-24 pb-36 text-white">
-      <div className="max-w-[1600px] w-full mx-auto px-4 sm:px-8 lg:px-12">
+      <div className="max-w-6xl w-full mx-auto px-6 sm:px-10 lg:px-12">
         
         {/* PAGE HEADER */}
         <div className="text-center mb-10 space-y-3">
@@ -210,11 +210,11 @@ export default function TripBuilderView({ onBuildTrip }) {
             </span>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-serif-display font-medium text-white tracking-tight">
+          <h1 className="text-3xl md:text-5xl font-serif-display font-medium text-white tracking-tight">
             Design Your <span className="italic">Perfect Trip</span>
           </h1>
 
-          <p className="text-[#9CA3AF] text-base md:text-lg max-w-3xl mx-auto font-normal">
+          <p className="text-[#9CA3AF] text-sm md:text-base max-w-2xl mx-auto font-normal">
             Select your destination, set your budget & preferences. AI will handle the route, stays & timing.
           </p>
         </div>
@@ -579,12 +579,12 @@ export default function TripBuilderView({ onBuildTrip }) {
           </div>
 
           {/* STICKY BOTTOM BUTTON: BUILD MY JOURNEY */}
-          <div className="sticky bottom-6 z-30 pt-4">
+          <div className="sticky bottom-6 z-30 pt-4 flex justify-center">
             <button
               type="submit"
-              className="w-full py-5 rounded-2xl bg-[#00F5D4] text-black font-syne font-extrabold text-xl shadow-2xl shadow-[#00F5D4]/40 hover:bg-[#00F5D4]/90 hover:scale-[1.01] transition-all flex items-center justify-center space-x-3 glow-teal cursor-pointer"
+              className="w-full max-w-md py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#00F5D4] to-[#38BDF8] text-black font-syne font-bold text-base shadow-xl shadow-[#00F5D4]/25 hover:opacity-95 hover:scale-[1.01] transition-all flex items-center justify-center space-x-2.5 glow-teal cursor-pointer"
             >
-              <Sparkles className="w-6 h-6 animate-spin text-black" />
+              <Sparkles className="w-5 h-5 text-black" />
               <span>Build My Journey with Tripzy</span>
             </button>
           </div>

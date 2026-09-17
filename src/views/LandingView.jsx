@@ -300,23 +300,23 @@ export default function LandingView({ onStartPlanning }) {
             </div>
           </section>
 
-          {/* FINAL HERO CTA BANNER (UNBLOCKED) */}
-          <section className="py-16 text-center px-6 sm:px-10 lg:px-12 max-w-[1600px] mx-auto mb-16">
-            <div className="py-10">
-              <div className="max-w-3xl mx-auto space-y-6">
-                <h2 className="text-4xl md:text-5xl font-syne font-extrabold text-white">
+          {/* FINAL HERO CTA BANNER */}
+          <section className="py-12 text-center px-6 sm:px-10 lg:px-12 max-w-5xl mx-auto mb-12">
+            <div className="py-8">
+              <div className="max-w-2xl mx-auto space-y-5">
+                <h2 className="text-3xl md:text-4xl font-syne font-bold text-white">
                   Ready to travel smarter?
                 </h2>
-                <p className="text-gray-300 text-base max-w-xl mx-auto">
+                <p className="text-gray-300 text-sm md:text-base max-w-lg mx-auto">
                   Step through the aircraft window and let Tripzy craft your next dream travel journey.
                 </p>
                 <div>
                   <button
                     onClick={handleStartBookingFlow}
-                    className="px-10 py-5 rounded-full bg-[#00F5D4] text-black font-syne font-extrabold text-xl shadow-2xl shadow-[#00F5D4]/40 hover:bg-[#00F5D4]/90 hover:scale-105 transition-all inline-flex items-center space-x-3 glow-teal cursor-pointer"
+                    className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#00F5D4] to-[#38BDF8] text-black font-syne font-bold text-base shadow-xl shadow-[#00F5D4]/30 hover:scale-105 transition-all inline-flex items-center space-x-2.5 glow-teal cursor-pointer"
                   >
-                    <Rocket className="w-6 h-6 fill-black text-black" />
-                    <span>🚀 Start My Travel Journey</span>
+                    <Rocket className="w-5 h-5 fill-black text-black" />
+                    <span>Start My Travel Journey</span>
                   </button>
                 </div>
               </div>
