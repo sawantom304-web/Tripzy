@@ -55,7 +55,7 @@ export default function App() {
       <Navbar currentView={currentView} setCurrentView={setCurrentView} />
 
       {/* Main Full-Width Viewport */}
-      <main className="flex-1 w-full pt-24">
+      <main className="flex-1 w-full pt-20">
           {currentView === 'landing' && (
             <LandingView onStartPlanning={handleStartPlanning} />
           )}

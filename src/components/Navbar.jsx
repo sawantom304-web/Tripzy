@@ -51,27 +51,27 @@ export default function Navbar({ currentView, setCurrentView }) {
 
 
       {/* Main Navbar Bar */}
-      <div className="w-full px-4 sm:px-8 lg:px-12 xl:px-16 py-4 sm:py-5 flex items-center justify-between">
-        {/* BRAND LOGO — ENLARGED WITH CUSTOM EMBLEM */}
+      <div className="w-full px-4 sm:px-8 lg:px-10 py-3 flex items-center justify-between">
+        {/* BRAND LOGO */}
         <button
           onClick={() => setCurrentView('landing')}
-          className="flex items-center space-x-3 text-left group cursor-pointer shrink-0"
+          className="flex items-center space-x-2.5 text-left group cursor-pointer shrink-0"
         >
           <img
             src="/tripzy-logo.png"
             alt="Tripzy Logo"
-            className="w-10 h-10 sm:w-12 sm:h-12 object-contain filter invert brightness-200 group-hover:scale-110 transition-transform duration-300"
+            className="w-7 h-7 sm:w-8 sm:h-8 object-contain filter invert brightness-200 group-hover:scale-105 transition-transform duration-300"
           />
-          <span className="font-syne font-extrabold text-3xl sm:text-4xl text-white tracking-wider group-hover:text-[#38BDF8] transition-colors">
+          <span className="font-syne font-extrabold text-xl sm:text-2xl text-white tracking-wider group-hover:text-[#38BDF8] transition-colors">
             TRIPZY
           </span>
-          <span className="px-2.5 py-1 text-xs font-mono font-bold rounded-lg bg-[#6C63FF]/30 text-[#38BDF8] border border-[#6C63FF]/40 shadow-md">
+          <span className="px-2 py-0.5 text-[10px] font-mono font-bold rounded-md bg-[#6C63FF]/30 text-[#38BDF8] border border-[#6C63FF]/40 shadow-sm">
             OS
           </span>
         </button>
 
-        {/* DESKTOP NAVIGATION CENTER LINKS — ENLARGED */}
-        <div className="hidden lg:flex items-center space-x-2 xl:space-x-3 bg-white/5 p-2 rounded-2xl border border-white/10 backdrop-blur-xl shadow-xl">
+        {/* DESKTOP NAVIGATION CENTER LINKS */}
+        <div className="hidden lg:flex items-center space-x-1 bg-white/5 p-1.5 rounded-xl border border-white/10 backdrop-blur-xl shadow-lg">
           {navItems.map((item) => {
             const Icon = item.icon;
             const active = currentView === item.id;
@@ -79,14 +79,14 @@ export default function Navbar({ currentView, setCurrentView }) {
               <button
                 key={item.id}
                 onClick={() => setCurrentView(item.id)}
-                className={`relative px-5 py-2.5 rounded-xl text-sm xl:text-base font-bold flex items-center space-x-2.5 transition-all cursor-pointer ${
+                className={`relative px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-semibold flex items-center space-x-2 transition-all cursor-pointer ${
                   active
-                    ? 'bg-gradient-to-r from-[#6C63FF] to-[#38BDF8] text-white shadow-xl shadow-[#6C63FF]/35 scale-[1.02]'
+                    ? 'bg-gradient-to-r from-[#6C63FF] to-[#38BDF8] text-white shadow-md shadow-[#6C63FF]/30 scale-[1.01]'
                     : 'text-gray-300 hover:text-white hover:bg-white/10'
                 }`}
               >
                 <Icon
-                  className={`w-5 h-5 ${
+                  className={`w-4 h-4 ${
                     active
                       ? 'text-white'
                       : item.highlight
@@ -97,15 +97,15 @@ export default function Navbar({ currentView, setCurrentView }) {
                 <span>{item.label}</span>
 
                 {item.highlight && !active && (
-                  <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-ping"></span>
+                  <span className="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
                 )}
               </button>
             );
           })}
         </div>
 
-        {/* RIGHT ACTION BUTTONS & USER PROFILE — ENLARGED */}
-        <div className="hidden md:flex items-center space-x-4 shrink-0">
+        {/* RIGHT ACTION BUTTONS & USER PROFILE */}
+        <div className="hidden md:flex items-center space-x-3 shrink-0">
           {/* Secondary Actions: Saved & Settings */}
           {secondaryItems.map((item) => {
             const Icon = item.icon;
@@ -115,27 +115,27 @@ export default function Navbar({ currentView, setCurrentView }) {
                 key={item.id}
                 onClick={() => setCurrentView(item.id)}
                 title={item.label}
-                className={`p-3 rounded-2xl border transition-all cursor-pointer ${
+                className={`p-2 rounded-xl border transition-all cursor-pointer ${
                   active
-                    ? 'bg-white/15 border-white/25 text-white shadow-lg'
+                    ? 'bg-white/15 border-white/25 text-white shadow-md'
                     : 'bg-white/5 border-white/10 text-gray-300 hover:text-white hover:bg-white/10 hover:border-white/20'
                 }`}
               >
-                <Icon className="w-5 h-5" />
+                <Icon className="w-4 h-4" />
               </button>
             );
           })}
 
-          <div className="h-8 w-px bg-white/15 mx-1" />
+          <div className="h-6 w-px bg-white/15 mx-0.5" />
 
-          {/* User Profile Pill — Larger */}
-          <div className="flex items-center space-x-3.5 pl-1.5 pr-4 py-1.5 rounded-2xl bg-white/5 border border-white/10 hover:border-white/25 hover:bg-white/10 transition-all cursor-pointer shadow-lg">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#6C63FF] to-[#38BDF8] flex items-center justify-center font-extrabold text-sm text-white shadow-md">
+          {/* User Profile Pill */}
+          <div className="flex items-center space-x-2.5 pl-1 pr-3 py-1 rounded-xl bg-white/5 border border-white/10 hover:border-white/25 hover:bg-white/10 transition-all cursor-pointer shadow-md">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-[#6C63FF] to-[#38BDF8] flex items-center justify-center font-bold text-xs text-white shadow-sm">
               PM
             </div>
             <div className="text-left">
-              <p className="text-sm font-bold text-white leading-tight">Priya Sharma</p>
-              <p className="text-xs text-gray-400 leading-tight">Pro Traveler</p>
+              <p className="text-xs font-semibold text-white leading-tight">Priya Sharma</p>
+              <p className="text-[10px] text-gray-400 leading-tight">Pro Traveler</p>
             </div>
           </div>
         </div>
@@ -143,16 +143,16 @@ export default function Navbar({ currentView, setCurrentView }) {
         {/* MOBILE MENU TOGGLE BUTTON */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-3 rounded-2xl bg-white/5 border border-white/10 text-gray-200 hover:text-white"
+          className="lg:hidden p-2 rounded-xl bg-white/5 border border-white/10 text-gray-200 hover:text-white"
         >
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
       </div>
 
       {/* MOBILE DROPDOWN MENU */}
       {mobileMenuOpen && (
-        <div className="lg:hidden mt-4 border-t border-white/10 bg-[#0A0E1A]/95 backdrop-blur-2xl px-6 py-6 space-y-3 animate-slide-down">
-          <div className="space-y-1.5">
+        <div className="lg:hidden border-t border-white/10 bg-[#0A0E1A]/95 backdrop-blur-2xl px-5 py-4 space-y-2.5 animate-slide-down">
+          <div className="space-y-1">
             {navItems.map((item) => {
               const Icon = item.icon;
               const active = currentView === item.id;
@@ -163,26 +163,26 @@ export default function Navbar({ currentView, setCurrentView }) {
                     setCurrentView(item.id);
                     setMobileMenuOpen(false);
                   }}
-                  className={`w-full flex items-center justify-between px-4 py-3.5 rounded-2xl text-base font-bold transition-all ${
+                  className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all ${
                     active
                       ? 'bg-gradient-to-r from-[#6C63FF] to-[#38BDF8] text-white'
                       : 'text-gray-300 hover:bg-white/5 hover:text-white'
                   }`}
                 >
-                  <div className="flex items-center space-x-3.5">
-                    <Icon className="w-5 h-5" />
+                  <div className="flex items-center space-x-3">
+                    <Icon className="w-4 h-4" />
                     <span>{item.label}</span>
                   </div>
                   {item.highlight && (
-                    <span className="w-3 h-3 rounded-full bg-red-500 animate-pulse"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
                   )}
                 </button>
               );
             })}
           </div>
 
-          <div className="pt-4 border-t border-white/10 flex items-center justify-between">
-            <div className="flex items-center space-x-3">
+          <div className="pt-3 border-t border-white/10 flex items-center justify-between">
+            <div className="flex items-center space-x-2">
               {secondaryItems.map((item) => {
                 const Icon = item.icon;
                 return (
@@ -192,19 +192,19 @@ export default function Navbar({ currentView, setCurrentView }) {
                       setCurrentView(item.id);
                       setMobileMenuOpen(false);
                     }}
-                    className="p-3 rounded-2xl bg-white/5 border border-white/10 text-gray-300 hover:text-white"
+                    className="p-2 rounded-xl bg-white/5 border border-white/10 text-gray-300 hover:text-white"
                   >
-                    <Icon className="w-5 h-5" />
+                    <Icon className="w-4 h-4" />
                   </button>
                 );
               })}
             </div>
 
-            <div className="flex items-center space-x-3 px-3.5 py-2 rounded-2xl bg-white/5 border border-white/10">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#6C63FF] to-[#38BDF8] flex items-center justify-center font-bold text-xs text-white">
+            <div className="flex items-center space-x-2.5 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10">
+              <div className="w-7 h-7 rounded-lg bg-gradient-to-tr from-[#6C63FF] to-[#38BDF8] flex items-center justify-center font-bold text-xs text-white">
                 PM
               </div>
-              <span className="text-sm font-semibold text-white">Priya Sharma</span>
+              <span className="text-xs font-semibold text-white">Priya Sharma</span>
             </div>
           </div>
         </div>
