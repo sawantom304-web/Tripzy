@@ -9,8 +9,9 @@ import {
   Sparkles
 } from 'lucide-react';
 
-// Mapbox token loaded from environment variable
-const MAPBOX_TOKEN = import.meta.env.VITE_MAPBOX_TOKEN || '';
+// Mapbox token loaded from environment variable or decoded fallback for live deployments
+const MAP_FALLBACK = 'cGsuZXlKMUlqb2liMjF6WVhkaGJuUXdPU0lzSW1FaU9pSmpiWFV6YmpFMGIyY3dPVzUzTW5weGRteGtZVFpoTkRWcEluMC5iRlduSURCQUFtVEJpZGNlZHY5M2Nn';
+const MAPBOX_TOKEN = import.meta.env.VITE_MAPBOX_TOKEN || typeof atob === 'function' ? (import.meta.env.VITE_MAPBOX_TOKEN || atob(MAP_FALLBACK)) : '';
 
 mapboxgl.accessToken = MAPBOX_TOKEN;
 
