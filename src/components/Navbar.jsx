@@ -51,27 +51,27 @@ export default function Navbar({ currentView, setCurrentView }) {
 
 
       {/* Main Navbar Bar */}
-      <div className="w-full px-4 sm:px-8 lg:px-10 py-3 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto w-full px-6 sm:px-8 py-2.5 flex items-center justify-between">
         {/* BRAND LOGO */}
         <button
           onClick={() => setCurrentView('landing')}
-          className="flex items-center space-x-2.5 text-left group cursor-pointer shrink-0"
+          className="flex items-center space-x-2 text-left group cursor-pointer shrink-0"
         >
           <img
             src="/tripzy-logo.png"
             alt="Tripzy Logo"
-            className="w-7 h-7 sm:w-8 sm:h-8 object-contain filter invert brightness-200 group-hover:scale-105 transition-transform duration-300"
+            className="w-6 h-6 sm:w-7 sm:h-7 object-contain filter invert brightness-200 group-hover:scale-105 transition-transform duration-300"
           />
-          <span className="font-syne font-extrabold text-xl sm:text-2xl text-white tracking-wider group-hover:text-[#38BDF8] transition-colors">
+          <span className="font-syne font-extrabold text-lg sm:text-xl text-white tracking-wider group-hover:text-[#38BDF8] transition-colors">
             TRIPZY
           </span>
-          <span className="px-2 py-0.5 text-[10px] font-mono font-bold rounded-md bg-[#6C63FF]/30 text-[#38BDF8] border border-[#6C63FF]/40 shadow-sm">
+          <span className="px-1.5 py-0.5 text-[9px] font-mono font-bold rounded bg-[#6C63FF]/30 text-[#38BDF8] border border-[#6C63FF]/40 shadow-sm">
             OS
           </span>
         </button>
 
-        {/* DESKTOP NAVIGATION CENTER LINKS */}
-        <div className="hidden lg:flex items-center space-x-1 bg-white/5 p-1.5 rounded-xl border border-white/10 backdrop-blur-xl shadow-lg">
+        {/* DESKTOP NAVIGATION CENTER LINKS — MEDIUM SIZING */}
+        <div className="hidden lg:flex items-center space-x-1 bg-white/5 p-1 rounded-xl border border-white/10 backdrop-blur-xl shadow-md">
           {navItems.map((item) => {
             const Icon = item.icon;
             const active = currentView === item.id;
@@ -79,14 +79,14 @@ export default function Navbar({ currentView, setCurrentView }) {
               <button
                 key={item.id}
                 onClick={() => setCurrentView(item.id)}
-                className={`relative px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-semibold flex items-center space-x-2 transition-all cursor-pointer ${
+                className={`relative px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center space-x-1.5 transition-all cursor-pointer ${
                   active
-                    ? 'bg-gradient-to-r from-[#6C63FF] to-[#38BDF8] text-white shadow-md shadow-[#6C63FF]/30 scale-[1.01]'
+                    ? 'bg-gradient-to-r from-[#6C63FF] to-[#38BDF8] text-white shadow-md shadow-[#6C63FF]/30'
                     : 'text-gray-300 hover:text-white hover:bg-white/10'
                 }`}
               >
                 <Icon
-                  className={`w-4 h-4 ${
+                  className={`w-3.5 h-3.5 ${
                     active
                       ? 'text-white'
                       : item.highlight
@@ -97,15 +97,15 @@ export default function Navbar({ currentView, setCurrentView }) {
                 <span>{item.label}</span>
 
                 {item.highlight && !active && (
-                  <span className="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span>
                 )}
               </button>
             );
           })}
         </div>
 
-        {/* RIGHT ACTION BUTTONS & USER PROFILE */}
-        <div className="hidden md:flex items-center space-x-3 shrink-0">
+        {/* RIGHT ACTION BUTTONS & USER PROFILE — MEDIUM SIZING */}
+        <div className="hidden md:flex items-center space-x-2.5 shrink-0">
           {/* Secondary Actions: Saved & Settings */}
           {secondaryItems.map((item) => {
             const Icon = item.icon;
@@ -115,27 +115,27 @@ export default function Navbar({ currentView, setCurrentView }) {
                 key={item.id}
                 onClick={() => setCurrentView(item.id)}
                 title={item.label}
-                className={`p-2 rounded-xl border transition-all cursor-pointer ${
+                className={`p-1.5 rounded-lg border transition-all cursor-pointer ${
                   active
-                    ? 'bg-white/15 border-white/25 text-white shadow-md'
+                    ? 'bg-white/15 border-white/25 text-white shadow-sm'
                     : 'bg-white/5 border-white/10 text-gray-300 hover:text-white hover:bg-white/10 hover:border-white/20'
                 }`}
               >
-                <Icon className="w-4 h-4" />
+                <Icon className="w-3.5 h-3.5" />
               </button>
             );
           })}
 
-          <div className="h-6 w-px bg-white/15 mx-0.5" />
+          <div className="h-5 w-px bg-white/15 mx-0.5" />
 
           {/* User Profile Pill */}
-          <div className="flex items-center space-x-2.5 pl-1 pr-3 py-1 rounded-xl bg-white/5 border border-white/10 hover:border-white/25 hover:bg-white/10 transition-all cursor-pointer shadow-md">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-[#6C63FF] to-[#38BDF8] flex items-center justify-center font-bold text-xs text-white shadow-sm">
+          <div className="flex items-center space-x-2 pl-1 pr-2.5 py-0.5 rounded-lg bg-white/5 border border-white/10 hover:border-white/25 hover:bg-white/10 transition-all cursor-pointer shadow-sm">
+            <div className="w-7 h-7 rounded-md bg-gradient-to-tr from-[#6C63FF] to-[#38BDF8] flex items-center justify-center font-bold text-[11px] text-white shadow-xs">
               PM
             </div>
             <div className="text-left">
-              <p className="text-xs font-semibold text-white leading-tight">Priya Sharma</p>
-              <p className="text-[10px] text-gray-400 leading-tight">Pro Traveler</p>
+              <p className="text-[11px] font-semibold text-white leading-tight">Priya Sharma</p>
+              <p className="text-[9px] text-gray-400 leading-tight">Pro Traveler</p>
             </div>
           </div>
         </div>
