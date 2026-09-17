@@ -48,72 +48,7 @@ export default function Navbar({ currentView, setCurrentView }) {
           : 'bg-[#0A0E1A]/90 backdrop-blur-md border-white/5'
       }`}
     >
-      {/* TOP HORIZONTAL MOVING TEXT TICKER — HOME PAGE ONLY */}
-      {currentView === 'landing' && (
-        <div className="w-full bg-transparent border-b border-white/10 py-2.5 overflow-hidden">
-          <div className="animate-marquee whitespace-nowrap flex items-center space-x-10 text-sm sm:text-base md:text-lg font-syne font-extrabold tracking-widest text-white uppercase">
-            <div className="flex items-center space-x-10 shrink-0">
-              <span className="text-[#00F5D4] font-mono text-xs tracking-widest px-2 py-0.5 rounded bg-[#00F5D4]/10 border border-[#00F5D4]/30">POPULAR DESTINATIONS</span>
-              <span className="hover:text-[#38BDF8] transition-colors cursor-pointer">GOA</span>
-              <span className="text-[#38BDF8]">✦</span>
-              <span className="hover:text-[#38BDF8] transition-colors cursor-pointer">RAJASTHAN</span>
-              <span className="text-[#6C63FF]">✦</span>
-              <span className="hover:text-[#38BDF8] transition-colors cursor-pointer">KERALA</span>
-              <span className="text-[#00F5D4]">✦</span>
-              <span className="hover:text-[#38BDF8] transition-colors cursor-pointer">HIMACHAL PRADESH</span>
-              <span className="text-[#38BDF8]">✦</span>
-              <span className="hover:text-[#38BDF8] transition-colors cursor-pointer">KASHMIR</span>
-              <span className="text-[#6C63FF]">✦</span>
-              <span className="hover:text-[#38BDF8] transition-colors cursor-pointer">LADAKH</span>
-              <span className="text-[#00F5D4]">✦</span>
-              <span className="hover:text-[#38BDF8] transition-colors cursor-pointer">UTTARAKHAND</span>
-              <span className="text-[#38BDF8]">✦</span>
-              <span className="hover:text-[#38BDF8] transition-colors cursor-pointer">MAHARASHTRA</span>
-              <span className="text-[#6C63FF]">✦</span>
-              <span className="hover:text-[#38BDF8] transition-colors cursor-pointer">KARNATAKA</span>
-              <span className="text-[#00F5D4]">✦</span>
-              <span className="hover:text-[#38BDF8] transition-colors cursor-pointer">TAMIL NADU</span>
-              <span className="text-[#38BDF8]">✦</span>
-              <span className="hover:text-[#38BDF8] transition-colors cursor-pointer">MEGHALAYA</span>
-              <span className="text-[#6C63FF]">✦</span>
-              <span className="hover:text-[#38BDF8] transition-colors cursor-pointer">SIKKIM</span>
-              <span className="text-[#00F5D4]">✦</span>
-              <span className="hover:text-[#38BDF8] transition-colors cursor-pointer">ANDAMAN & NICOBAR</span>
-              <span className="text-[#38BDF8]">✦</span>
-            </div>
-            {/* Duplicate set for seamless infinite right-to-left loop */}
-            <div className="flex items-center space-x-10 shrink-0">
-              <span className="text-[#00F5D4] font-mono text-xs tracking-widest px-2 py-0.5 rounded bg-[#00F5D4]/10 border border-[#00F5D4]/30">POPULAR DESTINATIONS</span>
-              <span className="hover:text-[#38BDF8] transition-colors cursor-pointer">GOA</span>
-              <span className="text-[#38BDF8]">✦</span>
-              <span className="hover:text-[#38BDF8] transition-colors cursor-pointer">RAJASTHAN</span>
-              <span className="text-[#6C63FF]">✦</span>
-              <span className="hover:text-[#38BDF8] transition-colors cursor-pointer">KERALA</span>
-              <span className="text-[#00F5D4]">✦</span>
-              <span className="hover:text-[#38BDF8] transition-colors cursor-pointer">HIMACHAL PRADESH</span>
-              <span className="text-[#38BDF8]">✦</span>
-              <span className="hover:text-[#38BDF8] transition-colors cursor-pointer">KASHMIR</span>
-              <span className="text-[#6C63FF]">✦</span>
-              <span className="hover:text-[#38BDF8] transition-colors cursor-pointer">LADAKH</span>
-              <span className="text-[#00F5D4]">✦</span>
-              <span className="hover:text-[#38BDF8] transition-colors cursor-pointer">UTTARAKHAND</span>
-              <span className="text-[#38BDF8]">✦</span>
-              <span className="hover:text-[#38BDF8] transition-colors cursor-pointer">MAHARASHTRA</span>
-              <span className="text-[#6C63FF]">✦</span>
-              <span className="hover:text-[#38BDF8] transition-colors cursor-pointer">KARNATAKA</span>
-              <span className="text-[#00F5D4]">✦</span>
-              <span className="hover:text-[#38BDF8] transition-colors cursor-pointer">TAMIL NADU</span>
-              <span className="text-[#38BDF8]">✦</span>
-              <span className="hover:text-[#38BDF8] transition-colors cursor-pointer">MEGHALAYA</span>
-              <span className="text-[#6C63FF]">✦</span>
-              <span className="hover:text-[#38BDF8] transition-colors cursor-pointer">SIKKIM</span>
-              <span className="text-[#00F5D4]">✦</span>
-              <span className="hover:text-[#38BDF8] transition-colors cursor-pointer">ANDAMAN & NICOBAR</span>
-              <span className="text-[#38BDF8]">✦</span>
-            </div>
-          </div>
-        </div>
-      )}
+
 
       {/* Main Navbar Bar */}
       <div className="w-full px-4 sm:px-8 lg:px-12 xl:px-16 py-4 sm:py-5 flex items-center justify-between">
